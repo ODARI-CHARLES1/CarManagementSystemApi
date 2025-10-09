@@ -12,6 +12,7 @@ app.get("/",(req,res)=>{
 
 app.listen(PORT,()=>console.log(`Server running on http://localhost:${PORT}`))
 
+console.log('testing....')
 //Creating a pool...
 const pool=getPool()
 pool.then(()=>console.log("Database Connected Succesfully"))
