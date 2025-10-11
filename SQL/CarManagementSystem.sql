@@ -1,5 +1,5 @@
-CREATE DATABASE CarMangementSystem;
-USE CarMangementSystem;
+CREATE DATABASE CarManagementSystem;
+USE CarManagementSystem;
 CREATE TABLE Car (
     Car_id VARCHAR(50) PRIMARY KEY,
     Car_model VARCHAR(50),
