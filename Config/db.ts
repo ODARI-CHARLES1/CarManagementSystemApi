@@ -11,8 +11,6 @@ assert(SQL_SERVER,"Provide Server Name")
 assert(SQL_USER,"Provide User Name")
 assert(SQL_PORT,"Provide Server Port")
 
-
-
 export const config = {
     port: SQL_PORT,
     sqlConfig: {
