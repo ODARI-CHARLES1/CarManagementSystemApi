@@ -38,12 +38,10 @@ export const CarInfo = async (carInfo: any) => {
   }
 };
 
-//update car information
-export const updateCarManufacturer = async (
-  manufacturer: string,
-  car_id: string
-) => {
+//update car manufacturer information
+export const updateCarManufacturer = async (updateInfo:any) => {
   try {
+    const {manufacturer,car_id}=updateInfo
     let exist: boolean = false;
     const pool = await getPool();
     const CarExist = await pool
@@ -72,8 +70,9 @@ export const updateCarManufacturer = async (
 };
 
 //update car model
-export const updateCarModel = async (carModel: string, car_id: string) => {
+export const updateCarModel = async (updateCarInfo:any) => {
   try {
+    const{carModel,car_id}=updateCarInfo
     let exist: boolean = false;
     const pool = await getPool();
     const CarExist = await pool
@@ -102,8 +101,9 @@ export const updateCarModel = async (carModel: string, car_id: string) => {
 };
 
 //updature manufactured year.
-export const updateCarYear = async (Year: number, car_id: string) => {
+export const updateCarYear = async (updateInfo:any) => {
   try {
+    const {Year,car_id}=updateInfo;
     let exist: boolean = false;
     const pool = await getPool();
     const CarExist = await pool
@@ -132,8 +132,9 @@ export const updateCarYear = async (Year: number, car_id: string) => {
 };
 
 //update car color
-export const updateCarColor = async (CarColor: string, car_id: string) => {
+export const updateCarColor = async (updateInfo:any) => {
   try {
+    const {CarColor,car_id}=updateInfo
     let exist: boolean = false;
     const pool = await getPool();
     const CarExist = await pool
@@ -163,10 +164,10 @@ export const updateCarColor = async (CarColor: string, car_id: string) => {
 
 //update Rental_Rate
 export const updateCarRentalRate = async (
-  CarRentalRate: string,
-  car_id: string
+  updateInfo:any
 ) => {
   try {
+    const {car_id,CarRentalRate}=updateInfo
     let exist: boolean = false;
     const pool = await getPool();
     const CarExist = await pool
@@ -196,10 +197,10 @@ export const updateCarRentalRate = async (
 
 //update car Availabitility..
 export const updateCarAvailability = async (
-  CarAvailability: string,
-  car_id: string
+  updateInfo:any
 ) => {
   try {
+    const{car_id,CarAvailability}=updateInfo
     let exist: boolean = false;
     const pool = await getPool();
     const CarExist = await pool
