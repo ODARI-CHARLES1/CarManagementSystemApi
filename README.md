@@ -13,18 +13,19 @@ A RESTful API for managing a car rental system, built with Node.js, Express, and
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone <repository-url>
    cd CarManagementSystemApi
    ```
-
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
-
 3. Set up environment variables:
    Create a `.env` file in the root directory with the following:
+
    ```
    PORT=5000
    DB_HOST=your-db-host
@@ -32,15 +33,16 @@ A RESTful API for managing a car rental system, built with Node.js, Express, and
    DB_PASSWORD=your-db-password
    DB_NAME=CarMangementSystem
    ```
-
 4. Run the database setup:
    Execute the SQL script in `SQL/CarManagementSystem.sql` to create the database and tables.
-
 5. Start the server:
+
    ```bash
    npm start
    ```
+
    Or for development:
+
    ```bash
    npm run dev
    ```
@@ -50,11 +52,13 @@ The server will run on `http://localhost:5000`.
 ## API Documentation
 
 ### Base URL
+
 ```
 http://localhost:5000/api
 ```
 
 ### Authentication
+
 Currently, no authentication is implemented. All endpoints are public.
 
 ### Endpoints
@@ -62,15 +66,16 @@ Currently, no authentication is implemented. All endpoints are public.
 #### Cars
 
 - **GET /api/cars**
+
   - Description: Retrieve all cars
   - Response: Array of car objects
-
 - **GET /api/cars/:id**
+
   - Description: Retrieve a specific car by ID
   - Parameters: `id` (string) - Car ID
   - Response: Car object
-
 - **POST /api/cars**
+
   - Description: Add a new car
   - Body:
     ```json
@@ -85,14 +90,14 @@ Currently, no authentication is implemented. All endpoints are public.
     }
     ```
   - Response: Created car object
-
 - **PUT /api/cars/:id**
+
   - Description: Update a car
   - Parameters: `id` (string) - Car ID
   - Body: Partial car object
   - Response: Updated car object
-
 - **DELETE /api/cars/:id**
+
   - Description: Delete a car
   - Parameters: `id` (string) - Car ID
   - Response: Success message
@@ -100,15 +105,16 @@ Currently, no authentication is implemented. All endpoints are public.
 #### Customers
 
 - **GET /api/customers**
+
   - Description: Retrieve all customers
   - Response: Array of customer objects
-
 - **GET /api/customers/:id**
+
   - Description: Retrieve a specific customer by ID
   - Parameters: `id` (string) - Customer ID
   - Response: Customer object
-
 - **POST /api/customers**
+
   - Description: Add a new customer
   - Body:
     ```json
@@ -122,14 +128,14 @@ Currently, no authentication is implemented. All endpoints are public.
     }
     ```
   - Response: Created customer object
-
 - **PUT /api/customers/:id**
+
   - Description: Update a customer
   - Parameters: `id` (string) - Customer ID
   - Body: Partial customer object
   - Response: Updated customer object
-
 - **DELETE /api/customers/:id**
+
   - Description: Delete a customer
   - Parameters: `id` (string) - Customer ID
   - Response: Success message
@@ -137,15 +143,16 @@ Currently, no authentication is implemented. All endpoints are public.
 #### Bookings
 
 - **GET /api/bookings**
+
   - Description: Retrieve all bookings
   - Response: Array of booking objects
-
 - **GET /api/bookings/:id**
+
   - Description: Retrieve a specific booking by ID
   - Parameters: `id` (string) - Booking ID
   - Response: Booking object
-
 - **POST /api/bookings**
+
   - Description: Create a new booking
   - Body:
     ```json
@@ -159,14 +166,14 @@ Currently, no authentication is implemented. All endpoints are public.
     }
     ```
   - Response: Created booking object
-
 - **PUT /api/bookings/:id**
+
   - Description: Update a booking
   - Parameters: `id` (string) - Booking ID
   - Body: Partial booking object
   - Response: Updated booking object
-
 - **DELETE /api/bookings/:id**
+
   - Description: Delete a booking
   - Parameters: `id` (string) - Booking ID
   - Response: Success message
@@ -174,15 +181,16 @@ Currently, no authentication is implemented. All endpoints are public.
 #### Locations
 
 - **GET /api/locations**
+
   - Description: Retrieve all locations
   - Response: Array of location objects
-
 - **GET /api/locations/:id**
+
   - Description: Retrieve a specific location by ID
   - Parameters: `id` (string) - Location ID
   - Response: Location object
-
 - **POST /api/locations**
+
   - Description: Add a new location
   - Body:
     ```json
@@ -196,14 +204,14 @@ Currently, no authentication is implemented. All endpoints are public.
     }
     ```
   - Response: Created location object
-
 - **PUT /api/locations/:id**
+
   - Description: Update a location
   - Parameters: `id` (string) - Location ID
   - Body: Partial location object
   - Response: Updated location object
-
 - **DELETE /api/locations/:id**
+
   - Description: Delete a location
   - Parameters: `id` (string) - Location ID
   - Response: Success message
@@ -215,6 +223,7 @@ All responses are in JSON format. Successful operations return status 200, creat
 ### Error Handling
 
 Errors are returned in the following format:
+
 ```json
 {
   "error": "Error message"
