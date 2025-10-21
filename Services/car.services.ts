@@ -1,5 +1,10 @@
 import * as carRepositories from '../Repository/car.repository'
 
+export const simplebasic=()=>{
+    return 20;
+}
+
+
 export const fetchCars=async()=>{
     const cars=await carRepositories.fetchCars()
     return cars
