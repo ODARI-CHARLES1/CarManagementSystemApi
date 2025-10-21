@@ -2,21 +2,18 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "NodeNext",
-    "rootDir": "./config",
-    // "moduleResolution": "node10",
     "moduleResolution": "nodenext",
+    "rootDir": "./",
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    /* Type Checking */
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noEmitOnError": true,
+    "declaration": true,
+    "types": ["node"]
   },
-  "include": [
-    "config/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts", "dist"]
 }
